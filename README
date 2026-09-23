@@ -1,0 +1,134 @@
+# MyFridge – Groceries & Recipe Dashboard
+
+MyFridge is a mobile‑first, single‑page groceries dashboard designed to help household members track what’s in their fridge and discover recipes based on available ingredients. Built with pure HTML, CSS, and JavaScript, MyFridge focuses on a clean, modern interface, simple data displays, and smooth interactions.
+
+---
+
+## Overview
+
+MyFridge combines two core functions:
+
+1. **Grocery Tracker**
+   - Track what’s currently in the fridge
+   - Record the amount of each item
+   - Store estimated expiration dates
+
+2. **Recipe Recommendations**
+   - Suggest dishes based on what is in the fridge
+   - Prioritize recipes using items that are closest to expiring
+   - Offer simple to complex recipes based on:
+     - Number of ingredients
+     - Cookware and prep time
+
+The goal is a single, focused dashboard page with a clean layout and ample negative space, optimized for mobile devices and still looking great on larger screens.
+
+---
+
+## Features
+
+### Dashboard Layout
+
+- **Single‑page design** (`index.html`)
+- **Multiple card layout** with a maximum content width of **480px**
+- Potential sections/cards:
+  - Current fridge inventory, separated by categories:
+    - Vegetables
+    - Meats
+    - Condiments
+    - Sauces
+    - Other perishables
+  - Add / edit item details:
+    - Name, category, quantity, date added, estimated expiration date
+  - “Expiring Soon” section to highlight items that need attention
+  - “Recipe Boosters” – what ingredients are missing to unlock more recipes
+  - Specialty recipe section:
+    - Recipes organized by difficulty and cooking time
+  - Weekly planner:
+    - Plan which recipes to cook on specific days
+
+### Visual Design
+
+MyFridge aims for a light, airy feel with playful accents:
+
+- Primary colorway:
+  - Complimentary **natural pastels** and **warm tones**
+  - **White lettering** for maximum legibility on colored surfaces
+- Charts and visual indicators use a **warm accent color** for emphasis
+- **Fun, legible font** for a friendly yet readable experience
+- **Elegant design** emphasizing:
+  - Ample negative space
+  - Clear hierarchy between sections
+  - Minimal visual clutter
+
+### Interactions & Animations
+
+- **Smooth hover animations** on buttons, links, and interactive elements
+- Subtle transitions for card hover/focus states to reinforce the modern feel
+- Simple, performant CSS transitions (no heavy animation libraries)
+
+---
+
+## Technology Stack
+
+MyFridge is intentionally lightweight and framework‑free.
+
+- **HTML**
+  - Single `index.html` file
+  - Semantic structure for cards, inventory lists, forms, and recipe sections
+
+- **CSS**
+  - Custom stylesheet (e.g., `styles.css`)
+  - Mobile‑first responsive layout
+  - Card‑based design and pastel color system
+  - Utility classes for spacing, typography, and alignment
+  - Smooth hover states and transitions
+
+- **JavaScript**
+  - No frameworks or build tools
+  - Handles:
+    - Managing fridge inventory data (add/edit/remove items)
+    - Calculating and highlighting items nearing expiration
+    - Matching available ingredients to recipe suggestions
+    - Basic local storage for user data (optional, to persist fridge contents and plans)
+
+> **Note:** There are no external frameworks (React, Vue, etc.) and no bundlers or build tools. The site is a static deployment.
+
+---
+
+## Data Sources
+
+Recipe recommendations can be powered by:
+
+- Curated lists of **top‑rated recipes** from sources such as:
+  - Food Network
+  - Other trusted online recipe platforms
+- Optionally:
+  - A recipe API integration (e.g., Spoonacular or similar), if desired in future versions
+
+Implementation details (how recipes are stored or fetched) should be documented in the codebase and can be expanded as the project grows.
+
+---
+
+## Accessibility & Contrast
+
+Accessibility is a core consideration in MyFridge:
+
+- High contrast between text and backgrounds, even with pastel color usage
+- Sufficient contrast ratios for all accent colors
+- Clear focus states for interactive elements (buttons, links, form controls)
+- Legible font sizes and spacing for mobile users
+- Logical heading structure and ARIA attributes where helpful
+
+---
+
+## Deployment
+
+MyFridge is deployed as a static site on **Vercel**.
+
+### Project Structure
+
+```text
+/
+├─ index.html
+├─ styles.css
+└─ script.js
